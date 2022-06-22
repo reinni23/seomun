@@ -1,0 +1,230 @@
+/* --------------------------------------------------------main */
+menu {
+  width: 100%;
+}
+.load {
+  width: 800px;
+  height: 600px;
+  border: 1px solid red;
+  margin: auto;
+  text-align: center;
+}
+.bg1 {
+  max-width: 1440px;
+  position: relative;
+  margin: auto;
+}
+.bg_img1 {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  background-image: url(../img/10g_seomun.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg_txt1 {
+  width: 300px;
+  height: 20%;
+  background-color: rgb(47, 47, 47, 0.5);
+  position: absolute;
+  top: 40%;
+  left: 0;
+  margin: auto;
+}
+.bg_txt1 > p {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  padding: 25px 50px;
+}
+.notice {
+  max-width: 1440px;
+  padding: 60px 120px;
+  margin: auto;
+}
+.noti_search {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-bottom: 70px;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid #2a2e35;
+}
+.search_txt {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: block;
+  width: 240px;
+  height: 30px;
+  border: 1px solid #787d86;
+  border-radius: 10px;
+}
+input {
+  border: 0;
+  background: none;
+  outline: none;
+  width: 210px;
+  padding-left: 10px;
+}
+.search_btn {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/iconset1.png);
+  background-repeat: no-repeat;
+  background-position: -36px -8px;
+}
+.noti_search > p {
+  font-size: 22px;
+}
+.notice_box {
+  width: 100%;
+  vertical-align: middle;
+  padding: 25px 0;
+  border-bottom: 1px solid #2a2e35;
+  display: flex;
+}
+.num_size {
+  padding: 0 60px;
+  display: block;
+}
+.num {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: bold;
+  color: #e6e8ec;
+  line-height: 40px;
+  text-align: center;
+}
+.num > span {
+  order: 1;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 60px;
+  padding-top: 0;
+}
+.tit {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2a2e35;
+  line-height: 34px;
+}
+.tit > span {
+  display: inline-block;
+  border: 1px solid #0080cc;
+  color: #0080cc;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  padding: 0 12px;
+  margin-right: 15px;
+}
+.tit > a {
+  color: #2a2e35;
+}
+.txt_size > .txt {
+  word-break: break-all;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 13px;
+  color: #787d86;
+  font-weight: 300;
+  max-height: 56px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.btn_n {
+  display: flex;
+  border: 1px solid #2a2e35;
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+.btn_left {
+  background-image: url(../img/arrow-back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.btn_right {
+  background-image: url(../img/arrow-back.png);
+  transform: rotate(180deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+/* ----------------------------------------1200px--- */
+@media only screen and (max-width: 1200px) {
+  .bg_img1 {
+    width: 100%;
+    max-width: 1200px;
+    height: 360px;
+  }
+  .bg_txt1 {
+    width: 280px;
+    height: 20%;
+    top: 40%;
+  }
+  .bg_txt1 > p {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    padding: 25px 50px;
+  }
+  .notice {
+    max-width: 1200px;
+    padding: 40px 60px;
+    margin: auto;
+  }
+  .noti_search > p {
+    line-height: 52px;
+    font-size: 18px;
+  }
+}
+/* --------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  .num_size {
+    display: none;
+  }
+  .notice_box {
+    font-size: 16px;
+    line-height: 10px;
+  }
+
+  .tit > span {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  .tit > span:nth-child(2) {
+    display: none;
+  }
+  .button a {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+}

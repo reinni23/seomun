@@ -1,0 +1,239 @@
+/* ----------------------------------------------------main */
+main {
+  width: 100%;
+}
+.bg1 {
+  max-width: 1440px;
+  position: relative;
+  margin: auto;
+}
+.bg_pic1 {
+  width: 100%;
+  height: 480px;
+  margin: auto;
+  position: relative;
+  background-image: url(../img/DSC01220-.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg_txt1 {
+  width: 300px;
+  height: 20%;
+  background-color: rgb(47, 47, 47, 0.5);
+  position: absolute;
+  top: 40%;
+  left: 0;
+  margin: auto;
+}
+.bg_txt1 > p {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  padding: 25px 50px;
+}
+.info_title {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 36px 0;
+}
+.line {
+  width: 474px;
+  height: 1px;
+  background-color: black;
+  margin: auto;
+}
+.info_sub1 {
+  font-size: 22px;
+  padding: 40px 0;
+}
+.info1 {
+  max-width: 1440px;
+  background-color: #e9f7fc;
+  margin: 50px auto;
+  text-align: center;
+}
+/* ---------------------------info2 */
+.info2 {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  background-color: #eff4fe;
+  display: flex;
+  padding: 50px 120px;
+  box-sizing: border-box;
+}
+.seomun_img {
+  width: 300px;
+  height: 300px;
+  background-image: url(../img/10g_seomun.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.info2_text {
+  width: 75%;
+  margin: auto;
+}
+.info2_title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.info2_main {
+  margin-left: 60px;
+}
+/* --------------------------------------map */
+
+.map {
+  max-width: 1440px;
+  background-color: #e9f7fc;
+  margin: 100px auto 50px;
+  padding: 50px 80px;
+  box-sizing: border-box;
+}
+.map_title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.contact_map {
+  width: 100%;
+  margin-top: 50px;
+  height: 438px;
+}
+.map_text span {
+  font-size: 22px;
+  font-weight: bold;
+}
+.map_text p {
+  font-size: 16px;
+}
+.map_text img {
+  width: 15px;
+  height: 15px;
+  margin: 6px 5px 5px 0;
+}
+.map_subway {
+  width: 100%;
+  margin: 40px 0;
+}
+.map_bus {
+  width: 100%;
+  margin: 20px 0;
+}
+.map_memo {
+  width: 100%;
+  margin: 20px 0;
+}
+/* ----------------------------------------1200px--- */
+@media only screen and (max-width: 1200px) {
+  .seomun_img {
+    width: 250px;
+    height: 250px;
+    background-image: url(../img/10경_서문시장.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-top: 100px;
+  }
+  .info2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #eff4fe;
+    display: flex;
+    padding: 60px 70px;
+    box-sizing: border-box;
+  }
+  .info_title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px 0;
+  }
+  .info_sub1 {
+    font-size: 18px;
+    padding: 28px 0;
+  }
+}
+/* ----------------------------------------768px--- */
+
+@media only screen and (max-width: 768px) {
+  .info_title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 30px 0 15px 0;
+  }
+  .line {
+    width: 234px;
+    height: 1px;
+    background-color: black;
+    margin: auto;
+  }
+  .info_sub1 {
+    font-size: 14px;
+    padding: 24px 0 35px;
+  }
+  .info1 {
+    max-width: 1440px;
+    background-color: #e9f7fc;
+    margin: 50px auto;
+    text-align: center;
+  }
+  /* ---------------------------info2 */
+
+  .info2 {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    background-color: #eff4fe;
+    display: block;
+    padding: 60px 40px;
+    box-sizing: border-box;
+  }
+  .seomun_img {
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/10경_서문시장.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto 50px;
+  }
+  .info2_title {
+    font-size: 16px;
+  }
+  .info2_main {
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  /* ---------------------------------------map */
+  .map {
+    max-width: 768px;
+    background-color: #e9f7fc;
+    margin: auto;
+    padding: 55px 65px;
+    box-sizing: border-box;
+  }
+  .map_title {
+    font-size: 16px;
+  }
+  .contact_map {
+    width: 100%;
+    margin-top: 50px;
+    max-height: 280px;
+  }
+  .map_text span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .map_text p {
+    font-size: 14px;
+  }
+  .map_text img {
+    width: 14px;
+    height: 14px;
+    margin: 4px 5px 5px 0;
+  }
+}

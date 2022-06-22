@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/notice.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>서문시장 공지사항</title>
+  </head>
+  <body>
+    <header>
+      <a href="#"
+        ><img src="img/logo2.png" class="logo" alt="서문시장 로고"
+      /></a>
+      <nav class="menu1">
+        <ul>
+          <li><a href="#">야시장소개</a></li>
+          <li><a href="#">먹거리살거리</a></li>
+          <li><a href="#">서문거리예술문화</a></li>
+          <li><a href="#">입점신청</a></li>
+          <li><a href="#">참여마당</a></li>
+        </ul>
+      </nav>
+      <nav class="menu2">
+        <ul>
+          <li>
+            <div class="login_img"></div>
+            <a href="#"> 로그인</a>
+          </li>
+          <li>
+            <div class="search_img"></div>
+            <a href="#"> 검색</a>
+          </li>
+          <li>
+            <div class="list_img"></div>
+            <a href="#"> 일정</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="">
+        <nav class="menu_list">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </nav>
+      </a>
+    </header>
+    <main>
+      <section class="bg1">
+        <div class="bg_img1"></div>
+        <div class="bg_txt1">
+          <p>공지사항</p>
+        </div>
+      </section>
+      <table border="2" class="load">
+        <tr>
+          <td>번호</td>
+          <td>정보</td>
+          <td>작성일</td>
+        </tr>
+        <% rows.forEach((row, index)=>{ %>
+        <tr>
+          <td><%=row.id%></td>
+          <td onclick="javascript:location.href='/updatenoti?id=<%=row.id%>'">
+            <%= row.title%>
+          </td>
+          <td><%= row.date%></td>
+          <td>
+            <input
+              type="button"
+              onclick="javascript:location.href='/updatenoti?id=<%=row.id%>'"
+              value="수정"
+            />
+            <input
+              type="button"
+              onclick="javascript:location.href='/deletenoti?id=<%=row.id%>'"
+              value="삭제"
+            />
+          </td>
+        </tr>
+        <% }) %>
+      </table>
+      <button
+        type="button"
+        value="새작성"
+        onclick="javascript:location.href='/write'"
+        style="float: right"
+      >
+        글쓰기버튼
+      </button>
+    </main>
+    <footer>
+      <div class="footer_box1">
+        <div class="logo_b">
+          <a href="#"><img src="img/logo_test1.png" /></a>
+        </div>
+        <p class="copyright">
+          대구 동구 아양로 208-1 3층, 재단법인 대구전통시장진흥재단ㆍ<br />
+          글로벌명품시장육성사업단매대관리자 Seomun Night Market Ⓒ2016 Daegu
+          traditional Market<br />
+          Support Agency. All Rights Reserved
+        </p>
+        <ul class="sns_icon">
+          <li>
+            <a href="#"><img src="img/facebook_icon.png" /></a>
+            <a href="#"><img src="img/youtube_icon.png" /></a>
+            <a href="#"><img src="img/insta_icon.png" /></a>
+            <a href="#"><img src="img/twitter_icon.png" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

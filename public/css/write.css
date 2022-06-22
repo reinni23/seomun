@@ -1,0 +1,22 @@
+header {
+  width: 100%;
+}
+section {
+  width: 1200px;
+  margin: auto;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+table {
+  width: 100%;
+}
+textarea {
+  width: 50%;
+  height: 300px;
+}
+td {
+  padding: 20px 10px;
+  border: 1px dashed rgb(112, 82, 63);
+}

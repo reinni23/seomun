@@ -1,0 +1,93 @@
+.login {
+  max-width: 1000px;
+  margin: 400px auto 0;
+  position: relative;
+}
+.join {
+  float: right;
+  display: block;
+  position: absolute;
+  right: 263px;
+  top: -60px;
+  color: #134a99;
+}
+.join > i {
+  display: inline-block;
+  width: 7px;
+  height: 17px;
+  background-image: url(../img/ico_blue_arrow.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+  background-size: 7px 13px;
+  margin-left: 10px;
+}
+.login_tap {
+  margin: 0 auto;
+  width: 320px;
+  display: flex;
+  justify-content: space-around;
+}
+.login_tap > li {
+  display: flex;
+}
+.login_tap > li > h2 {
+  line-height: 17px;
+  margin-left: 5px;
+}
+.login_box {
+  padding-top: 10px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+}
+.login_text {
+  width: 280px;
+}
+.login_id {
+  display: block;
+  padding-left: 10px;
+  width: 100%;
+  height: 45px;
+  border: 0;
+  background-color: #ececec;
+  border-radius: 5px;
+}
+.login_pw {
+  margin-top: 10px;
+  display: block;
+  padding-left: 10px;
+  width: 100%;
+  height: 45px;
+  border: 0;
+  background-color: #ececec;
+  border-radius: 5px;
+}
+.login_btn {
+  margin-left: 30px;
+  border: 0;
+  width: 20%;
+  border-radius: 6px;
+  background-color: #134a99;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+}
+.login_check {
+  display: flex;
+  justify-content: center;
+  padding-top: 55px;
+}
+.check_wrap li > a {
+  color: black;
+}
+.checkbox {
+  margin-right: 10px;
+}
+.login_find {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
