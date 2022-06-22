@@ -55,7 +55,7 @@ router.post(
   (req, res) => {
     let errs = validationResult(req);
     let param = JSON.parse(JSON.stringify(req.body));
-    let id = param["id"];
+    let id = param['id'];
     let title = param['title'];
     let content = param['content'];
 
