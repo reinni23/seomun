@@ -46,7 +46,7 @@ function getNoticeById(id, callback) {
 //리스트를 수정하고 싶을때 id값이 일치하는 부분을 수정하는 함수
 function updateNoticeById(id, title, content, callback) {
   connection.query(
-    `UPDATE notice SET title ='${title}', content='${content}' , date=NOW() WHERE id='${id}'`,
+    `UPDATE notice SET WHERE id='${id}', title='${title}', content='${content}' , date=NOW()`,
     (err, result) => {
       if (err) throw err;
       callback();
@@ -56,7 +56,7 @@ function updateNoticeById(id, title, content, callback) {
 
 //리스트 중 id값이 일치하는 부분을 삭제하는 함수
 function deleteNoticeById(id, callback) {
-  connection.query(`DELETE from notice WHERE id =${id}`, (err, result) => {
+  connection.query(`DELETE from notice WHERE id=${id}`, (err, result) => {
     if (err) throw err;
     callback();
   });
@@ -65,7 +65,7 @@ function deleteNoticeById(id, callback) {
 //id값이 일치한 값의 모든 값을 가져오는 함수
 function getpageByid(id, callback) {
   connection.query(
-    `SELECT * FROM notice WHERE id = '${id}'`,
+    `SELECT * FROM notice WHERE id='${id}'`,
     (err, row, fields) => {
       if (err) throw err;
       callback(row);
