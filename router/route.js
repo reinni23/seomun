@@ -55,6 +55,7 @@ router.post(
   (req, res) => {
     let errs = validationResult(req);
     let param = JSON.parse(JSON.stringify(req.body));
+    let id = param["id"];
     let title = param['title'];
     let content = param['content'];
 
@@ -63,7 +64,7 @@ router.post(
         res.render("updatenoti", { row: row[0], errs:errs["errors"] });
       });
     } else {
-      db.updateNoticeById(title, content, () => {
+      db.updateNoticeById(id, title, content, () => {
         res.redirect("/");
       });
     }
