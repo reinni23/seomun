@@ -1,22 +1,22 @@
 const mysql = require("mysql");
 
-// const connection = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: "1234",
-//   port: '3306',
-//   database: "seomun",
-//   dateStrings: "date", //날짜 시간 출력
-// });
-
 const connection = mysql.createConnection({
-  host: "us-cdbr-east-05.cleardb.net",
-  user: "b6f830318e8c66",
-  password: "4d8f0264",
-  port: '3306',
-  database: "heroku_8e004b8947f5c3b",
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  port: "3306",
+  database: "seomun",
   dateStrings: "date", //날짜 시간 출력
 });
+
+// const connection = mysql.createConnection({
+//   host: "us-cdbr-east-05.cleardb.net",
+//   user: "b6f830318e8c66",
+//   password: "4d8f0264",
+//   port: '3306',
+//   database: "heroku_8e004b8947f5c3b",
+//   dateStrings: "date", //날짜 시간 출력
+// });
 
 //리스트 전체를 불러오는 방법
 function getAllNotice(callback) {
@@ -55,7 +55,7 @@ function getNoticeById(id, callback) {
 //리스트를 수정하고 싶을때 id값이 일치하는 부분을 수정하는 함수
 function updateNoticeById(id, title, content, callback) {
   connection.query(
-    `UPDATE notice SET WHERE id='${id}', title='${title}', content='${content}' , date=NOW()`,
+    `UPDATE notice SET content='${content}', title='${title}', date=NOW() WHERE id='${id}'`,
     (err, result) => {
       if (err) throw err;
       callback();
@@ -71,16 +71,16 @@ function deleteNoticeById(id, callback) {
   });
 }
 
-//id값이 일치한 값의 모든 값을 가져오는 함수
-function getpageByid(id, callback) {
-  connection.query(
-    `SELECT * FROM notice WHERE id='${id}'`,
-    (err, row, fields) => {
-      if (err) throw err;
-      callback(row);
-    }
-  );
-}
+// //id값이 일치한 값의 모든 값을 가져오는 함수
+// function getpageByid(id, callback) {
+//   connection.query(
+//     `SELECT * FROM notice WHERE id='${id}'`,
+//     (err, row, fields) => {
+//       if (err) throw err;
+//       callback(row);
+//     }
+//   );
+// }
 
 module.exports = {
   getAllNotice,
