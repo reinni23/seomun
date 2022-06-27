@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/notice.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="#"
+        ><img src="img/logo2.png" class="logo" alt="서문시장 로고"
+      /></a>
+      <nav class="menu1">
+        <ul>
+          <li><a href="#">야시장소개</a></li>
+          <li><a href="#">먹거리살거리</a></li>
+          <li><a href="#">서문거리예술문화</a></li>
+          <li><a href="#">입점신청</a></li>
+          <li><a href="#">참여마당</a></li>
+        </ul>
+      </nav>
+      <nav class="menu2">
+        <ul>
+          <li>
+            <div class="login_img"></div>
+            <a href="#"> 로그인</a>
+          </li>
+          <li>
+            <div class="search_img"></div>
+            <a href="#"> 검색</a>
+          </li>
+          <li>
+            <div class="list_img"></div>
+            <a href="#"> 일정</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="">
+        <nav class="menu_list">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </nav>
+      </a>
+    </header>
+    <main>
+      <section class="notice_deta">
+        <% if(typeof errs !== 'undefined'){ %> <% errs.forEach(() =>{ %> <%=
+        err.param %> : <%= err.msg %> <% }) %> <%}%>
+        <form>
+          <p><%=row.id%></p>
+          <h4><%=row.title%></h4>
+
+          <article>
+            <p><%=row.content%></p>
+          </article>
+        </form>
+        <div>
+          <input
+            type="button"
+            onclick="javascript:location.href='/updatenoti?id=<%=row.id%>'"
+            value="수정"
+          />
+          <input
+            type="button"
+            onclick="javascript:location.href='/deletenoti?id=<%=row.id%>'"
+            value="삭제"
+          />
+        </div>
+        <span class="notice_deta_bottom"
+          ><a href="/">
+            <p>목록</p>
+          </a></span
+        >
+      </section>
+    </main>
+  </body>
+</html>

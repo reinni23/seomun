@@ -71,16 +71,16 @@ function deleteNoticeById(id, callback) {
   });
 }
 
-// //id값이 일치한 값의 모든 값을 가져오는 함수
-// function getpageByid(id, callback) {
-//   connection.query(
-//     `SELECT * FROM notice WHERE id='${id}'`,
-//     (err, row, fields) => {
-//       if (err) throw err;
-//       callback(row);
-//     }
-//   );
-// }
+//id값이 일치한 값의 모든 값을 가져오는 함수
+function getpageByid(id, callback) {
+  connection.query(
+    `SELECT * FROM notice WHERE id='${id}'`,
+    (err, row, fields) => {
+      if (err) throw err;
+      callback(row);
+    }
+  );
+}
 
 module.exports = {
   getAllNotice,
@@ -88,4 +88,5 @@ module.exports = {
   getNoticeById,
   deleteNoticeById,
   updateNoticeById,
+  getpageByid
 };

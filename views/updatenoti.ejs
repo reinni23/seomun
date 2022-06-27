@@ -10,28 +10,97 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>공지</h1>
-    <% if(typeof errs !== "undefined"){ %> <% errs.forEach((err)=>{%>
-    <h4 style="color: red"><%=err.param%> : <%=err.msg%></h4>
-    <% }) %> <% } %>
-    <form method="POST" action="/updatenoti">
-      <input type="hidden" name="id" value="<%=row.id%>" />
-      <p>정보</p>
+    <header>
+      <a href="#"
+        ><img src="img/logo2.png" class="logo" alt="서문시장 로고"
+      /></a>
+      <nav class="menu1">
+        <ul>
+          <li><a href="#">야시장소개</a></li>
+          <li><a href="#">먹거리살거리</a></li>
+          <li><a href="#">서문거리예술문화</a></li>
+          <li><a href="#">입점신청</a></li>
+          <li><a href="#">참여마당</a></li>
+        </ul>
+      </nav>
+      <nav class="menu2">
+        <ul>
+          <li>
+            <div class="login_img"></div>
+            <a href="#"> 로그인</a>
+          </li>
+          <li>
+            <div class="search_img"></div>
+            <a href="#"> 검색</a>
+          </li>
+          <li>
+            <div class="list_img"></div>
+            <a href="#"> 일정</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="">
+        <nav class="menu_list">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </nav>
+      </a>
+    </header>
+    <main>
+      <section class="bg1">
+        <div class="bg_img1"></div>
+        <div class="bg_txt1">
+          <p>공지사항</p>
+        </div>
+      </section>
+      <section class="update_main_p">
+        <h1>공지</h1>
+        <% if(typeof errs !== "undefined"){ %> <% errs.forEach((err)=>{%>
+        <h4 style="color: red"><%=err.param%> : <%=err.msg%></h4>
+        <% }) %> <% } %>
+        <form method="POST" action="/updatenoti">
+          <input type="hidden" name="id" value="<%=row.id%>" />
+          <p>제목</p>
 
-      <input name="title" class="title_number" value="<%=row.title%>" />
-      <p>컨텐츠</p>
-      <input name="content" class="title_news" value="<%=row.content%>" />
-      
-      <tr>
-        <td colspan="2">
-          <input type="submit" value="저장" id="save" />
-          <input
-            type="button"
-            value="뒤로 가기"
-            onclick="javascript:location.href='/'"
-          />
-        </td>
-      </tr>
-    </form>
+          <input name="title" class="title_number" value="<%=row.title%>" />
+          <p>내용</p>
+          <textarea name="content" class="title_news" value="<%=row.content%>">
+          </textarea>
+
+          <div>
+            <input type="submit" value="저장" id="save" />
+            <input
+              type="button"
+              value="뒤로 가기"
+              onclick="javascript:location.href='/'"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
+  <footer>
+    <div class="footer_box1">
+      <div class="logo_b">
+        <a href="#"><img src="img/logo_test1.png" /></a>
+      </div>
+      <p class="copyright">
+        대구 동구 아양로 208-1 3층, 재단법인 대구전통시장진흥재단ㆍ<br />
+        글로벌명품시장육성사업단매대관리자 Seomun Night Market Ⓒ2016 Daegu
+        traditional Market<br />
+        Support Agency. All Rights Reserved
+      </p>
+      <ul class="sns_icon">
+        <li>
+          <a href="#"><img src="img/facebook_icon.png" /></a>
+          <a href="#"><img src="img/youtube_icon.png" /></a>
+          <a href="#"><img src="img/insta_icon.png" /></a>
+          <a href="#"><img src="img/twitter_icon.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </html>

@@ -71,6 +71,22 @@ router.post(
   }
 );
 
+router.get("/manager", (req, res) => {
+  res.render("manager");
+});
+
+router.get('/notice_deta', function(req, res) {
+  let id = req.query.id;
+
+  db.getpageByid(id, (row)=>{
+      if(typeof id === 'undefined' || row.length <= 0){
+          res.status(404).json({error:'undefind memo'});
+      } else {
+          res.render('notice_deta',{row:row[0]});
+      }
+  });
+});
+
 router.get("/deletenoti", (req, res) => {
   let id = req.query.id;
   db.deleteNoticeById(id, () => {

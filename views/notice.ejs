@@ -61,34 +61,35 @@
           <p>공지사항</p>
         </div>
       </section>
-      <table border="2" class="load">
-        <tr>
-          <td>번호</td>
-          <td>정보</td>
-          <td>작성일</td>
-        </tr>
+      <section class="notice">
         <% rows.forEach((row, index)=>{ %>
-        <tr>
-          <td><%=row.id%></td>
-          <td onclick="javascript:location.href='/updatenoti?id=<%=row.id%>'">
-            <%= row.title%>
-          </td>
-          <td><%= row.date%></td>
-          <td>
-            <input
-              type="button"
-              onclick="javascript:location.href='/updatenoti?id=<%=row.id%>'"
-              value="수정"
-            />
-            <input
-              type="button"
-              onclick="javascript:location.href='/deletenoti?id=<%=row.id%>'"
-              value="삭제"
-            />
-          </td>
-        </tr>
+        <div class="noti_search"></div>
+        <ul class="notice_box">
+          <li class="num_size">
+            <div class="num"><%= row.date%></div>
+          </li>
+        </ul>
+        <%= row.id%>
+        <ul>
+          <li
+            onclick="javascript:location.href='/notice_deta?id=<%=row.id%>'"
+          ><%= row.title%></li>
+        </ul>
+
+        <div class="update_btn">
+          <input
+            type="button"
+            onclick="javascript:location.href='/updatenoti?id=<%=row.id%>'"
+            value="수정"
+          />
+          <input
+            type="button"
+            onclick="javascript:location.href='/deletenoti?id=<%=row.id%>'"
+            value="삭제"
+          />
+        </div>
         <% }) %>
-      </table>
+      </section>
       <button
         type="button"
         value="새작성"
