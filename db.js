@@ -10,7 +10,7 @@ const mysql = require("mysql");
 // });
 
 const connection = mysql.createConnection({
-  host: "@us-cdbr-east-05.cleardb.net",
+  host: "us-cdbr-east-05.cleardb.net",
   user: "b6f830318e8c66",
   password: "4d8f0264",
   port: '3306',
