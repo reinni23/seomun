@@ -5,10 +5,6 @@ var logger = require("morgan");
 var path = require("path");
 const http = this.require("http");
 
-setInterval(function () {
-  http.get("https://seomuntest23.herokuapp.com/");
-}, 600000);
-
 var routers = require("./router/route");
 
 var app = express();
