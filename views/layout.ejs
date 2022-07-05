@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -42,7 +42,11 @@
       <ul>
         <li>
           <div class="login_img"></div>
-          <a href="register"> 로그인</a>
+          <a id="login" href="register" onclick="javascript:kakaoLogin();">
+            로그인</a
+          >
+          <a><span id="user"></span>님</a>
+          <a id="logout" onclick="javascript:kakaoLogout();">로그아웃</a>
         </li>
         <li>
           <div class="search_img"></div>
@@ -50,7 +54,7 @@
         </li>
         <li>
           <div class="list_img"></div>
-          <a href="#"> 일정</a>
+          <a href="join"> 회원가입</a>
         </li>
       </ul>
     </nav>
@@ -88,7 +92,28 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <%- script %>
   <script src="../js/join.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    Kakao.init("88e2b5f9218db5b4bc69eba32f59cb45");
+    Kakao.isInitialized();
+
+    function kakaoLogin() {
+      Kakao.Auth.login({
+        success: function (response) {
+          Kakao.API.request({
+            url: "/v2/user/me",
+            success: function (response) {
+              console.log(response);
+              // document.getElementById("user").innerText =
+              //   response.kakao_account.profile.nickname;
+            },
+          });
+        },
+      });
+    }
+    function kakaoLogout() {}
+  </script>
 </html>

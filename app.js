@@ -9,9 +9,9 @@ const http = require("http");
 
 const routers = require("./router/route.js");
 
-// setInterval(function () {
-//   http.get("https://seomuntest23.herokuapp.com/");
-// }, 600000);
+setInterval(function () {
+  http.get("https://seomuntest23.herokuapp.com/");
+}, 600000);
 
 app.set("views", path.join(__dirname, "views")); //views라는 폴더안에 ejs들을 불러올거다. + views안에 ejs파일들을 만들어주면됨.
 app.set("view engine", "ejs");
