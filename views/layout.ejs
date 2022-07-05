@@ -40,12 +40,12 @@
     </nav>
     <nav class="menu2">
       <ul>
-          <div class="login_img"></div>
-          <li id="login" href="register" onclick="javascript:kakaoLogin();">
-            로그인</li
-          >
-          <li><span id="user"></span>님</li>
-          <li id="logout" onclick="javascript:kakaoLogout();">로그아웃</li>
+        <div class="login_img"></div>
+        <li id="login" href="register" onclick="javascript:kakaoLogin();">
+          로그인
+        </li>
+        <li><span id="user"></span>님</li>
+        <li id="logout" onclick="javascript:kakaoLogout();">로그아웃</li>
         <li>
           <div class="search_img"></div>
           <a href="#"> 검색</a>
@@ -107,11 +107,24 @@
               console.log(response);
               document.getElementById("user").innerText =
                 response.kakao_account.profile.nickname;
+              document.getElementById("login").style.display = "none";
+              alert(
+                response.kakao_account.profile.nickname +
+                  "님 로그인 되었습니다."
+              );
             },
           });
         },
       });
     }
-    function kakaoLogout() {}
+    function kakaoLogout() {
+      if (!Kakao.Auth.getAccessToken()) {
+        alert("Not logged in.");
+        return;
+      }
+      Kakao.Auth.logout(function () {
+        alert("logout ok\naccess token -> " + Kakao.Auth.getAccessToken());
+      });
+    }
   </script>
 </html>
