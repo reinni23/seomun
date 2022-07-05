@@ -43,8 +43,8 @@
         <li>
           <div class="login_img"></div>
           <a id="login" href="register" onclick="javascript:kakaoLogin();">
-            로그인
-            </a>
+            로그인</a
+          >
           <a><span id="user"></span>님</a>
           <a id="logout" onclick="javascript:kakaoLogout();">로그아웃</a>
         </li>
@@ -97,7 +97,7 @@
   <script src="../js/join.js"></script>
   <script src="../js/main.js"></script>
   <script>
-    Kakao.init("88e2b5f9218db5b4bc69eba32f59cb45");
+    Kakao.init("cd664b3f2a4245dd7ce8d9275a02b836");
     Kakao.isInitialized();
 
     function kakaoLogin() {
@@ -107,8 +107,8 @@
             url: "/v2/user/me",
             success: function (response) {
               console.log(response);
-              // document.getElementById("user").innerText =
-              //   response.kakao_account.profile.nickname;
+              document.getElementById("user").innerText =
+                response.kakao_account.profile.nickname;
             },
           });
         },
