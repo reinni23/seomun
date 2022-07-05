@@ -12,7 +12,7 @@ main {
 }
 video {
   width: 100%;
-  max-height: 480px;
+  max-height: 600px;
   position: relative;
   object-fit: fill;
 }
@@ -95,43 +95,36 @@ video {
   font-weight: bold;
   color: #134a99;
 }
+.font_22 > a:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
 .sub_list {
   padding-bottom: 10px;
 }
-.sub_list > ul {
+.sub_list > div {
   display: flex;
   margin: auto;
   justify-content: center;
   padding: 30px 0;
 }
-.sub_list > ul > li {
+.sub_list > div > a {
   padding: 10px 30px;
   border: 2px solid white;
   color: white;
   margin: 0 20px;
   border-radius: 40px;
-}
-.sub_list > ul > li > a {
   font-size: 18px;
-  color: white;
+  transition: 0.3s;
+}
+.sub_list > div > a:hover {
+  color: #134a99;
+  background-color: #fff;
 }
 .plus_button {
   display: none;
 }
 /* --------------------------------------------------------------menu image */
-.sub_img {
-  margin: auto;
-}
-.sub_img > ul {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 100px;
-}
-.sub_img li {
-  margin: 0 50px;
-}
 .sub_img p {
   font-size: 16px;
   font-weight: bold;
@@ -139,48 +132,47 @@ video {
   margin-top: 10px;
 }
 .sub_img h4 {
-  margin-top: 5px;
+  margin: 5px 0 50px;
   font-size: 14px;
   color: white;
 }
 .sub_img1 {
-  width: 308px;
-  height: 440px;
+  padding: 50% 0;
   border-radius: 10px;
   background-image: url(../img/ya13650_03_1488249125.jpg);
   background-size: cover;
   background-position: center;
 }
 .sub_img2 {
-  width: 308px;
-  height: 440px;
+  padding: 50% 0;
   border-radius: 10px;
   background-image: url(../img/ya18647_01_1515171336.png);
   background-size: cover;
   background-position: center;
 }
 .sub_img3 {
-  width: 308px;
-  height: 440px;
+  padding: 50% 0;
   border-radius: 10px;
   background-image: url(../img/ya27902_01_1551660243.jpg);
   background-size: cover;
   background-position: center;
 }
 .sub_img4 {
-  width: 308px;
-  height: 440px;
+  padding: 50% 0;
   border-radius: 10px;
   background-image: url(../img/ya44773_01_1609722489.jpg);
   background-size: cover;
   background-position: center;
 }
 .sub_img5 {
-  width: 308px;
-  height: 440px;
+  padding: 50% 0;
   border-radius: 10px;
   background-image: url(../img/ya50862_01_1647619729.jpg);
+  background-size: cover;
   background-position: center;
+}
+.sub_img_resize {
+  width: 85%;
 }
 /* --------------------------------------------------------------event */
 .event {
@@ -212,14 +204,15 @@ video {
   border: 2px solid #134aa9;
   border-radius: 50%;
   text-align: center;
+  line-height: 85px;
   top: 200px;
   left: 60px;
-}
-.more_button > a {
-  width: 90px;
-  line-height: 90px;
-  text-align: center;
   color: #134a99;
+}
+.more_button:hover {
+  background-color: #134a99;
+  color: #fff;
+  transition: 0.3s;
 }
 .event_img {
   max-width: 700px;
@@ -243,7 +236,6 @@ video {
   width: 100%;
   max-width: 1100px;
   padding: 0 10px;
-  overflow: auto;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -302,6 +294,10 @@ video {
 .alam_list > li:last-child {
   margin: 0;
 }
+.alam_list > li:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
 .alam_list span {
   font-size: 16px;
   font-weight: bold;
@@ -311,6 +307,7 @@ video {
   padding-top: 47px;
   font-size: 22px;
   font-weight: bold;
+  color: #303030;
 }
 .alam_list h4 {
   padding: 35px 0;
@@ -330,6 +327,7 @@ video {
   right: 45px;
   top: 83%;
 }
+
 /* ---------------1200 */
 @media only screen and (max-width: 1200px) {
   .sub_list {
@@ -339,29 +337,6 @@ video {
     padding: 20px 30px;
     margin: 40px 45px;
     border-radius: 40px;
-  }
-  .sub_img li {
-    width: 80%;
-  }
-  .sub_img1 {
-    width: 260px;
-    height: 380px;
-  }
-  .sub_img2 {
-    width: 260px;
-    height: 380px;
-  }
-  .sub_img3 {
-    width: 260px;
-    height: 380px;
-  }
-  .sub_img4 {
-    width: 260px;
-    height: 380px;
-  }
-  .sub_img5 {
-    width: 260px;
-    height: 380px;
   }
   /* --------------------------------------------------------------- */
   .event {
@@ -415,7 +390,7 @@ video {
 @media only screen and (max-width: 768px) {
   .video_box1 {
     width: 280px;
-    min-height:85px;
+    min-height: 85px;
   }
   .video_text1 {
     padding: 15px 30px;
@@ -496,6 +471,10 @@ video {
   .more_button {
     display: none;
   }
+
+  .sub_img_resize {
+    width: 100%;
+  }
   /* --------------------------------------------------------------- */
   .event {
     display: flex;
@@ -525,10 +504,18 @@ video {
     margin: auto;
   }
   .gal_img div {
-    max-width: 250px;
-    height: 250px;
+    max-width: 200px;
+    height: 200px;
   }
   .gal_img > li {
+    margin-right: 0;
+  }
+  .gal_wrap {
+    margin: 20px 0;
+  }
+
+  .gal_img > li {
+    min-width: 0;
     margin-right: 0;
   }
 

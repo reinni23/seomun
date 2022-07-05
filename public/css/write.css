@@ -1,22 +1,27 @@
-header {
-  width: 100%;
-}
-section {
-  width: 1200px;
+.write {
+  max-width: 1440px;
   margin: auto;
 }
-h2 {
-  font-size: 24px;
-  font-weight: bold;
+.write > h2 {
+  font-size: 28px;
+  padding: 10px 0;
 }
-table {
+.lab_title {
+  max-width: 1440px;
   width: 100%;
+  height: 25px;
+  border: 1px solid #494949;
 }
-textarea {
-  width: 50%;
-  height: 300px;
+.lab_cont {
+  width: 100%;
+  height: 500px;
+  resize: none;
 }
-td {
-  padding: 20px 10px;
-  border: 1px dashed rgb(112, 82, 63);
+.write_title {
+  font-size: 24px;
+  padding: 10px 0;
+}
+.write_content {
+  font-size: 18px;
+  padding: 10px 0;
 }

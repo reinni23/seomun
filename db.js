@@ -1,30 +1,30 @@
 const mysql = require("mysql");
 
-// const connection = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: "1234",
-//   port: "3306",
-//   database: "seomun",
-//   dateStrings: "date", //날짜 시간 출력
-// });
-
 const connection = mysql.createConnection({
-  host: "us-cdbr-east-05.cleardb.net",
-  user: "b6f830318e8c66",
-  password: "4d8f0264",
-  port: '3306',
-  database: "heroku_8e004b8947f5c3b",
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  port: "3306",
+  database: "seomun",
   dateStrings: "date", //날짜 시간 출력
 });
+
+// const connection = mysql.createConnection({
+//   host: "us-cdbr-east-05.cleardb.net",
+//   user: "b6f830318e8c66",
+//   password: "4d8f0264",
+//   port: '3306',
+//   database: "heroku_8e004b8947f5c3b",
+//   dateStrings: "date", //날짜 시간 출력
+// });
 
 //리스트 전체를 불러오는 방법
 function getAllNotice(callback) {
   connection.query(
     "select * from notice ORDER BY id DESC",
-    (err, rows, fields) => {
+    (err, row, fields) => {
       if (err) throw err;
-      callback(rows);
+      callback(row);
     }
   );
 }

@@ -1,0 +1,132 @@
+
+    <main>
+    <form name="join_form">
+      <div class="container">
+        <div>
+          <p>아이디</p>
+          <input type="text" class="textbox" name="uid" id="uid" />
+        </div>
+        <div>
+          <p>비밀번호</p>
+          <input type="password" class="textbox" name="pwd" id="pwd" />
+        </div>
+        <div>
+          <p>비밀번호 재확인</p>
+          <input type="password" class="textbox" name="repwd" id="repwd" />
+        </div>
+        <div class="name_box">
+          <p>이름</p>
+          <input type="text" class="textbox" name="uname" id="uname" />
+        </div>
+        <div>
+          <p>생년월일</p>
+          <div class="birth_wrap">
+            <span class="s_box">
+              <input
+                type="text"
+                id="yy"
+                maxlength="4"
+                placeholder="년(4자)"
+                class="birbox"
+            /></span>
+            <span class="a_box">
+              <select id="mm" label="월" class="sel">
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select> </span
+            ><span class="s_box">
+              <input
+                type="text"
+                id="dd"
+                maxlength="2"
+                placeholder="일"
+                class="birbox"
+            /></span>
+          </div>
+        </div>
+        <div>
+          <p>성별</p>
+          <span class="sel_wrap">
+            <select id="gender" class="selbox" label="성별">
+              <option value selected>성별</option>
+              <option value="M" name="gender" id="male">남자</option>
+              <option value="F" name="gender" id="female">여자</option>
+              <option value="U" name="user" id="user">선택안함</option>
+            </select>
+          </span>
+        </div>
+        <div>
+          <p>휴대전화</p>
+          <div class="phone_wrap">
+            <input
+              type="tel"
+              name="mobile"
+              id="mobile"
+              class="phone_box"
+              placeholder="전화번호"
+              maxlength="16"
+            />
+            <button class="regi_num">인증번호 받기</button>
+          </div>
+          <input
+            type="text"
+            class="textbox"
+            placeholder="인증번호를 입력하세요"
+            maxlength="4"
+          />
+        </div>
+        <div>
+          <p>주소</p>
+          <input type="text" name="addr1" id="addr1" class="textbox" />
+        </div>
+        <div>
+          <p>상세주소</p>
+          <input type="text" name="addr2" id="addr2" class="textbox" />
+        </div>
+        <div>
+          <p>이메일</p>
+          <div class="email_flex">
+            <input
+              type="text"
+              name="email_id"
+              id="email_id"
+              class="textbox mail"
+            />@
+            <input
+              type="text"
+              name="email_add"
+              id="email_add"
+              class="textbox mail"
+            />
+            <select name="email_sel" id="email_sel" onchange="change_email();">
+              <option value="">직접입력</option>
+              <option value="naver.com">naver.com</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="nate.com">nate.com</option>
+            </select>
+          </div>
+        </div>
+        <div class="agree_check">
+          <p>약관동의</p>
+          <p>
+            <input type="checkbox" value="Y" name="agree" id="agree" /> 약관에
+            동의합니다.
+          </p>
+        </div>
+        <div class="join_btn">
+          <button class="join_fin" type="button" onclick="joinform_check()">가입하기</button>
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="js/join.js"></script>
