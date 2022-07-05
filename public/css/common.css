@@ -33,7 +33,7 @@ header {
   color: #134a99;
 }
 .menu2 {
-  width: 18.68%;
+  width: 25%;
   padding-left: 50px;
 }
 .menu2 > ul {
@@ -55,7 +55,7 @@ header {
 .login_img {
   width: 30px;
   background-image: url(../img/iconset1.png);
-  background-position: 0 -1px;
+  background-position: 0 46px;
   background-repeat: no-repeat;
   background-size: auto;
 }

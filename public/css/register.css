@@ -91,3 +91,7 @@
   justify-content: center;
   padding: 80px 0;
 }
+#kakao_login {
+  background-image: url(../img/kakao_login_medium_narrow.png);
+  font-size: 0;
+}
