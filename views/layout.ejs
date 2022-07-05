@@ -121,7 +121,7 @@
       });
     }
     function kakaoLogout() {
-      if (!Kakao.Auth.getAccessToken()) {
+      if (Kakao.Auth.getAccessToken()) {
         Kakao.API.request({
           url: "/v1/user/unlink",
           success: function (response) {
@@ -130,8 +130,8 @@
             document.getElementById("login").style.display = "block";
             document.getElementById("logout").style.display = "none";
             alert("로그아웃 되었습니다.");
-          }
-        })
+          },
+        });
         Kakao.Auth.setAccessToken(undefined);
       }
     }
