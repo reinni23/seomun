@@ -34,7 +34,6 @@
   margin: auto;
   text-align: center;
 }
-
 .notice1_title {
   padding: 30px 0 50px;
   border-bottom: 2px solid #2a2e35;
@@ -53,7 +52,7 @@
   margin-bottom: 10px;
 }
 .notice1_txt {
-  padding: 50px 0 8px;
+  padding: 50px 0 40px;
   text-align: left;
   border-bottom: 1px solid #2a2e35;
 }
@@ -61,6 +60,7 @@
   line-height: 55px;
   font-size: 36px;
   font-weight: 700;
+  padding-bottom: 30px;
 }
 .notice1_txt p {
   line-height: 30px;
