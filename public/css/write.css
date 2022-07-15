@@ -1,6 +1,7 @@
 .write {
   max-width: 1440px;
   margin: auto;
+  padding: 0 40px;
 }
 .write > h2 {
   font-size: 28px;

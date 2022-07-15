@@ -7,8 +7,10 @@ router.use(expressLayouts);
 
 
 //route, routing
-router.get("/", (req, res) => {
-  res.render("main");
+router.get("/", (req, res, next) => {
+  db.getAllNotice((rows) => {
+    res.render("main", { rows: rows });
+  });
 });
 
 router.get("/info", (req, res) => {

@@ -128,42 +128,17 @@
   <section class="alam">
     <span>새로운 소식</span>
     <ul class="alam_list">
+      <% rows.forEach((row, index)=>{ %>
       <li>
-        <a href="">
+        <a href="/notice_deta?id=<%=row.id%>">
           <span>공지</span>
-          <h3>서문·칠성야시장 매대운영자 모집공고</h3>
-          <h4>
-            전국을 대표하는 야간관광지 「대구 서문·칠성 야시장」에서 뛰어난
-            열정을 펼칠 수 있는 창의적이고 역량이 뛰어난 매대 운영자를 ...
-          </h4>
-          <span class="date">2022-03-24</span>
+          <h3><%= row.title%></h3>
+          <h4><%=row.content%></h4>
+          <span class="date"><%= row.date%></span>
           <div class="s_button"></div>
         </a>
       </li>
-      <li>
-        <a href="">
-          <span>공지</span>
-          <h3>서문야시장 임시휴장 안내(2021.8.19. ~ 9.1.)</h3>
-          <h4>
-            서문야시장 임시휴장 안내 2021.8.19.(목) ~ 9.1.(수) 더 나은 모습으로
-            찾아뵙겠습니다. 감사합니다.
-          </h4>
-          <span class="date">2021-08-09</span>
-          <div class="s_button"></div>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <span>공지</span>
-          <h3>4월 3일 서문야시장 임시휴장</h3>
-          <h4>
-            서문야시장 임시휴장 오늘 4월 3일 토요일 서문야시장은 많은 비로 인한
-            안전 대비를 위하여 임시휴장합니다 내일 뵙겠습니다 ...
-          </h4>
-          <span class="date">2021-04-03</span>
-          <div class="s_button"></div>
-        </a>
-      </li>
+      <% }) %>
     </ul>
   </section>
   <section class="time">
