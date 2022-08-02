@@ -41,11 +41,11 @@
     <nav class="menu2">
       <ul>
         <div class="login_img"></div>
-        <li id="login" href="register" onclick="javascript:kakaoLogin();">
-          로그인
+        <li id="login">
+          <a href="register">로그인</a>
         </li>
-        <li><span id="user"></span></li>
-        <li id="logout" onclick="javascript:kakaoLogout();">로그아웃</li>
+        <!-- <li><span id="user"></span></li>
+        <li id="logout">로그아웃</li> -->
         <li>
           <div class="search_img"></div>
           <a href="#"> 검색</a>
@@ -90,9 +90,11 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+   -->
   <%- script %>
   <script src="../js/join.js"></script>
   <script src="../js/main.js"></script>
-  <script src="../js/kakao.js"></script>
+  <!-- <script src="../js/kakao.js"></script>
+
+  onclick="javascript:kakaoLogin();" -->
 </html>

@@ -388,6 +388,9 @@ video {
 }
 /* ----------------768 */
 @media only screen and (max-width: 768px) {
+  .sub_list > div {
+    flex-direction: column;
+  }
   .video_box1 {
     width: 280px;
     min-height: 85px;
@@ -408,7 +411,7 @@ video {
     padding-bottom: 30px;
   }
   .sub_menu1 {
-    width: 85%;
+    width: 50%;
     max-width: 768px;
     height: 100%;
     margin: auto;
@@ -453,6 +456,12 @@ video {
     margin: 0 10px;
     border-radius: 30px;
     font-size: 18px;
+  }
+  .sub_list > div > a {
+    margin: 30px auto;
+    border-radius: 40px;
+    width: 50%;
+    text-align: center;
   }
   .plus_button {
     width: 80%;
@@ -538,5 +547,11 @@ video {
   }
   .alam_list h4 {
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .sub_menu1 {
+    right: 10%;
   }
 }
